@@ -9,13 +9,11 @@ namespace EmployeeWage
 	    
 	    Console.WriteLine("Welcome To Employee Wage Computation");
 
-	    //UC9_Compute Employee Wages and save totalWages by company
-            EmpWageBuilderObj dmart = new EmpWageBuilderObj("Dmart", 20, 2, 10);
-            EmpWageBuilderObj reliance = new EmpWageBuilderObj("Reliance", 20, 2, 10);
-            dmart.computeEmpWage();
-            Console.WriteLine(dmart.toString());
-            reliance.computeEmpWage();
-            Console.WriteLine(reliance.toString());
+	    //UC10_EmployeeWage For Multiple Company Using Interface Approch           
+            EmpBuilderArray empWageBuilder = new EmpBuilderArray();
+            empWageBuilder.addComapnyEmpWage("DMart", 20, 2, 10);
+            empWageBuilder.addComapnyEmpWage("Relience", 10, 4, 20);
+            empWageBuilder.computeEmpWage();
             
         }  	              
      }
